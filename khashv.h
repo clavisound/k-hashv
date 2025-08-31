@@ -134,8 +134,8 @@ static KHASH_FINLINE int khashv_is_little_endian() {
 
 struct khashv_block_s {
     union {
-        uint8_t  bytes[16];
         uint32_t words[4];
+        uint8_t  bytes[16];
         #if defined(__SSE3__)
         __m128i  vec;
         #endif
